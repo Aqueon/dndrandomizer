@@ -9,6 +9,9 @@ $(document).ready(function () {
     $("#topnav_poisons").on('click', loadPoisonModule);
 
     function loadPotionModule () {
+        if ($('#topnav_potions').hasClass("active")) {
+            return;
+        }
         $('.topnav button').removeClass("active");
         $('#topnav_potions').addClass("active");
         $.get('./potions.html', {}, data => {
@@ -17,14 +20,20 @@ $(document).ready(function () {
     }
 
     function loadRumorModule () {
+        if ($('#topnav_rumors').hasClass("active")) {
+            return;
+        }
         $('.topnav button').removeClass("active");
         $('#topnav_rumors').addClass("active");
-        // $.get('./potions.html', {}, data => {
-        //     $("#root").html(data);
-        // });
+        $.get('./rumors.html', {}, data => {
+            $("#root").html(data);
+        });
     }
 
     function loadPoisonModule () {
+        if ($('#topnav_poisons').hasClass("active")) {
+            return;
+        }
         $('.topnav button').removeClass("active");
         $('#topnav_poisons').addClass("active");
         // $.get('./potions.html', {}, data => {
