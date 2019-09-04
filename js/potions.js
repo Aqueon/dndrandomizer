@@ -63,7 +63,7 @@ $(document).ready(function (){
             let tmpArray = potion_sideEffect;
             for (let j = 0; j < sideeffects; j++) {
                 let tmp = tmpArray.splice(Math.floor(Math.random() * tmpArray.length), 1);
-                sideEffect += tmp[0] + ", ";
+                sideEffect += tmp + ", ";
             }
             if (sideEffect !== "<b>Side effects:</b> ") sideEffect = sideEffect.substring(0, sideEffect.length - 2);
             sideEffect += "<br>";
