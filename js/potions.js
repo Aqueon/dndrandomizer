@@ -63,7 +63,7 @@ $(document).ready(function (){
             let tmpArray = potion_sideEffect;
             for (let j = 0; j < sideeffects; j++) {
                 let tmp = tmpArray.splice(Math.floor(Math.random() * tmpArray.length), 1);
-                sideEffect += tmp[0].substring(0, tmp[0].length - 1) + ", ";
+                sideEffect += tmp[0] + ", ";
             }
             if (sideEffect !== "<b>Side effects:</b> ") sideEffect = sideEffect.substring(0, sideEffect.length - 2);
             sideEffect += "<br>";
@@ -73,7 +73,7 @@ $(document).ready(function (){
             let taste = "<b>Taste:</b> " + potion_taste[Math.floor(Math.random() * potion_taste.length)] + "<br>";
             let smell = "<b>Smell:</b> " + potion_taste[Math.floor(Math.random() * potion_taste.length)] + "<br>";
             let label = "<b>Label:</b> " + potion_label[Math.floor(Math.random() * potion_label.length)] + "</p>";
-            
+
             resultElement = spoiledStart + element + type + mainEffect + strength + sideEffect + container + appearance + texture + taste + smell + label + spoiledEnd;
             mainBody.append(resultElement);
             history.append(resultElement);    
