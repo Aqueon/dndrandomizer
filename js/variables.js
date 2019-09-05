@@ -13,3 +13,10 @@ let rumor_target = new Array();
 let rumor_gossip1 = new Array();
 let rumor_gossip2 = new Array();
 let rumor_source = new Array();
+
+let poison_color = new Array();
+let poison_effect = new Array();
+let poison_mainIngredient = new Array();
+let poison_preparation = new Array();
+let poison_serving = new Array();
+let poison_texture = new Array();

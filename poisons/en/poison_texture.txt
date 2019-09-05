@@ -1,0 +1,12 @@
+A thick paste
+A thin paste
+A flaky powder
+A fluffy powder
+Made of fine crystals
+Made of coarse crystals
+A pungent potion
+A fragrant potion
+An odorless potion
+A foul-smelling potion
+An oily liquid
+A thick, gloopy liquid
