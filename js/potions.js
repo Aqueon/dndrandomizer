@@ -1,37 +1,14 @@
 $(document).ready(function (){
 
-    let potion_type = new Array;
-    let potion_mainEffect = new Array;
-    let potion_strength = new Array;
-    let potion_sideEffect = new Array;
-    let potion_container = new Array;
-    let potion_appearance1 = new Array;
-    let potion_appearance2 = new Array;
-    let potion_texture = new Array;
-    let potion_taste = new Array;
-    let potion_label = new Array;
-
-    $.get('./potions/potion_type.txt', data => potion_type = data.split('\n'));    
-    $.get('./potions/potion_mainEffect.txt', data =>potion_mainEffect = data.split('\n'));
-    $.get('./potions/potion_strength.txt', data => potion_strength = data.split('\n'));
-    $.get('./potions/potion_sideEffect.txt', data => potion_sideEffect = data.split('\n'));
-    $.get('./potions/potion_container.txt', data => potion_container = data.split('\n'));
-    $.get('./potions/potion_appearance1.txt', data => potion_appearance1 = data.split('\n'));
-    $.get('./potions/potion_appearance2.txt', data => potion_appearance2 = data.split('\n'));
-    $.get('./potions/potion_texture.txt', data => potion_texture = data.split('\n'));
-    $.get('./potions/potion_taste.txt', data => potion_taste = data.split('\n'));
-    $.get('./potions/potion_label.txt', data => potion_label = data.split('\n'));
-
-    $('#potion_generator').on('click', GeneratePotion);
-    let potions_history_button = $('#potions_history_show');
-    potions_history_button.on('click', () => {
+    $(document).on('click', '#potion_generator', GeneratePotion);
+    $(document).on('click', '#potions_history_show', () => {
         let potion_history = $('#potions_history');
         if (potion_history.css("display") === "none") {
             potion_history.css("display", "block");
-            potions_history_button.html('Hide history');
+            $('#potions_history_show').html('Hide history');
         } else {
             potion_history.css("display", "none");
-            potions_history_button.html('Show history');
+            $('#potions_history_show').html('Show history');
         }
     });
 
