@@ -14,9 +14,17 @@ $(document).ready(function () {
         }
         $('.topnav button').removeClass("active");
         $('#topnav_potions').addClass("active");
-        $.get('./potions.php', {}, data => {
-            $("#root").html(data);
-        });
+        $.ajax({
+            url: './potions.php',
+            type: 'get',
+            success: data => {
+                $('#root').html(data);
+            },
+            async: true,
+        })
+        // $.get('./potions.php', {}, data => {
+        //     $("#root").html(data);
+        // });
     }
 
     function loadRumorModule () {
