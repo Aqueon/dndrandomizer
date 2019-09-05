@@ -14,7 +14,7 @@ $(document).ready(function () {
         }
         $('.topnav button').removeClass("active");
         $('#topnav_potions').addClass("active");
-        $.get('./potions.html', {}, data => {
+        $.get('./potions.php', {}, data => {
             $("#root").html(data);
         });
     }
