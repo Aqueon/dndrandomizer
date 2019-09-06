@@ -2,14 +2,16 @@ $(document).ready(function (){
 
     $(document).on('click', '#rumor_generator', GenerateRumor);
     $(document).on('click', '#rumors_history_show', () => {
-        let rumor_history = $('#rumors_history');
-        if (rumor_history.css("display") === "none") {
-            rumor_history.css("display", "block");
-            $('#rumors_history_show').html('Hide history');
-        } else {
-            rumor_history.css("display", "none");
-            $('#rumors_history_show').html('Show history');
+        $('#rumors_history_modal').css('display', 'block');
+    });
+
+    $('#rumors_history_modal').on('click', (e) => {
+        if (!$(e.target).closest('#rumors_history').length){
+            $('#rumors_history_modal').css('display', 'none');
         }
+    });
+    $('#rumors_history_close').on('click', () => {
+        $('#rumors_history_modal').css('display', 'none');
     });
 
     function GenerateRumor () {

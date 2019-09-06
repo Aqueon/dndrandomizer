@@ -2,14 +2,16 @@ $(document).ready(function (){
 
     $(document).on('click', '#potion_generator', GeneratePotion);
     $(document).on('click', '#potions_history_show', () => {
-        let potion_history = $('#potions_history');
-        if (potion_history.css("display") === "none") {
-            potion_history.css("display", "block");
-            $('#potions_history_show').html('Hide history');
-        } else {
-            potion_history.css("display", "none");
-            $('#potions_history_show').html('Show history');
+        $('#potions_history_modal').css('display', 'block');
+    });
+
+    $('#potions_history_modal').on('click', (e) => {
+        if (!$(e.target).closest('#potions_history').length){
+            $('#potions_history_modal').css('display', 'none');
         }
+    });
+    $('#potions_history_close').on('click', () => {
+        $('#potions_history_modal').css('display', 'none');
     });
 
     function GeneratePotion () {

@@ -2,14 +2,16 @@ $(document).ready(function (){
 
     $(document).on('click', '#poison_generator', GeneratePoison);
     $(document).on('click', '#poisons_history_show', () => {
-        let poison_history = $('#poisons_history');
-        if (poison_history.css("display") === "none") {
-            poison_history.css("display", "block");
-            $('#poisons_history_show').html('Hide history');
-        } else {
-            poison_history.css("display", "none");
-            $('#poisons_history_show').html('Show history');
+        $('#poisons_history_modal').css('display', 'block');
+    });
+
+    $('#poisons_history_modal').on('click', (e) => {
+        if (!$(e.target).closest('#poisons_history').length){
+            $('#poisons_history_modal').css('display', 'none');
         }
+    });
+    $('#poisons_history_close').on('click', () => {
+        $('#poisons_history_modal').css('display', 'none');
     });
 
     function GeneratePoison () {
