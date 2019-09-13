@@ -9,7 +9,6 @@ $(document).ready(function () {
     $("#topnav_poisons").on('click', loadPoisonModule);
 
     function loadPotionModule () {
-        let language = "en";
         $.get('./potions/' + language + '/potion_type.txt', data => potion_type = data.split('\n'));    
         $.get('./potions/' + language + '/potion_mainEffect.txt', data =>potion_mainEffect = data.split('\n'));
         $.get('./potions/' + language + '/potion_strength.txt', data => potion_strength = data.split('\n'));

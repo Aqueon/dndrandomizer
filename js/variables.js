@@ -20,3 +20,5 @@ let poison_mainIngredient = new Array();
 let poison_preparation = new Array();
 let poison_serving = new Array();
 let poison_texture = new Array();
+
+let language = "en";
