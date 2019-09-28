@@ -21,4 +21,13 @@ let poison_preparation = new Array();
 let poison_serving = new Array();
 let poison_texture = new Array();
 
+let junk_description = new Array();
+
+let heirloom_decorations = new Array();
+let heirloom_material = new Array();
+let heirloom_owner = new Array();
+let heirloom_speciality = new Array();
+let heirloom_thing = new Array();
+let heirloom_value = new Array();
+
 let language = "en";

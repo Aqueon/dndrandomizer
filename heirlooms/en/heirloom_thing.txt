@@ -1,0 +1,8 @@
+Jewellery;Broach;Necklace;Ring;Earring;Gem;Monocle
+Carving of;A family member;An animal;Nothing in particular;A flower
+Art;Painting;Vase;Rug;Tapestry
+Furniture;Wardrobe;Couch;Table;Chair;Mirror;Clock
+Musical Instrument;Piano;Lute;Flute;Harp
+A weapon;Sword;Axe;Lance;Dagger;Mace;Bow;Crossbow;Morningstar
+A piece of armor;Shield;Helmet;Breastplate;Bracers
+A tool;Rake;Shovel;Rolling pin;Hatchet;Staff;Frying Pan;Tea pot;Silverware

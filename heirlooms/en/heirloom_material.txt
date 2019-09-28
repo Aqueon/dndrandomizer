@@ -1,0 +1,12 @@
+Wood
+Gold
+Silver
+Bronze
+Copper
+Steel
+Iron
+Mithril
+Tin
+Adamantine
+An unknown material
+Brass

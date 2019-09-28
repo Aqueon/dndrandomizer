@@ -8,6 +8,12 @@ $(document).ready(function () {
     $("#nav_poisons").on('click', loadPoisonModule);
     $("#topnav_poisons").on('click', loadPoisonModule);
 
+    $("#nav_junks").on('click', loadJunkModule);
+    $("#topnav_junks").on('click', loadJunkModule);
+
+    $("#nav_heirlooms").on('click', loadHeirloomModule);
+    $("#topnav_heirlooms").on('click', loadHeirloomModule);
+
     function loadPotionModule () {
         $.get('./potions/' + language + '/potion_type.txt', data => potion_type = data.split('\n'));    
         $.get('./potions/' + language + '/potion_mainEffect.txt', data =>potion_mainEffect = data.split('\n'));
@@ -62,6 +68,39 @@ $(document).ready(function () {
         $('.topnav button').removeClass("active");
         $('#topnav_poisons').addClass("active");
         $.get('./poisons.html', {}, data => {
+            $("#root").html(data);
+        });
+    }
+
+    function loadJunkModule () {
+        let language = "en";
+        $.get('./junks/' + language + '/junk_description.txt', data => junk_description = data.split('\n'));
+
+        if ($('#topnav_junks').hasClass("active")) {
+            return;
+        }
+        $('.topnav button').removeClass("active");
+        $('#topnav_junks').addClass("active");
+        $.get('./junks.html', {}, data => {
+            $("#root").html(data);
+        });
+    }
+
+    function loadHeirloomModule () {
+        let language = "en";
+        $.get('./heirlooms/' + language + '/heirloom_decorations.txt', data => heirloom_decorations = data.split('\n'));
+        $.get('./heirlooms/' + language + '/heirloom_material.txt', data => heirloom_material = data.split('\n'));
+        $.get('./heirlooms/' + language + '/heirloom_owner.txt', data => heirloom_owner = data.split('\n'));
+        $.get('./heirlooms/' + language + '/heirloom_speciality.txt', data => heirloom_speciality = data.split('\n'));
+        $.get('./heirlooms/' + language + '/heirloom_thing.txt', data => heirloom_thing = data.split('\n'));
+        $.get('./heirlooms/' + language + '/heirloom_value.txt', data => heirloom_value = data.split('\n'));
+
+        if ($('#topnav_heirlooms').hasClass("active")) {
+            return;
+        }
+        $('.topnav button').removeClass("active");
+        $('#topnav_heirlooms').addClass("active");
+        $.get('./heirlooms.html', {}, data => {
             $("#root").html(data);
         });
     }
