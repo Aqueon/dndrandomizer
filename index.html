@@ -7,11 +7,12 @@
 </head>
 <body>
     <nav class="topnav">
-        <button id="topnav_potions"><img src="./icons/potions.jpg" class="topnav_icons">Potions</button>
-        <button id="topnav_rumors"><img src="./icons/rumors.png" class="topnav_icons">Rumors</button>
-        <button id="topnav_poisons"><img src="./icons/poisons.png" class="topnav_icons">Poisons</button>
-        <button id="topnav_junks"><img src="" class="topnav_icons">Junk</button>
-        <button id="topnav_heirlooms"><img src="" class="topnav_icons">Heirlooms</button>
+        <button id="topnav_potions"><img src="./icons/potions.jpg" class="topnav_icons"><br>Potions</button>
+        <button id="topnav_rumors"><img src="./icons/rumors.png" class="topnav_icons"><br>Rumors</button>
+        <button id="topnav_poisons"><img src="./icons/poisons.png" class="topnav_icons"><br>Poisons</button>
+        <button id="topnav_junks"><img src="./icons/junks.png" class="topnav_icons"><br>Junk</button>
+        <button id="topnav_heirlooms"><img src="./icons/heirlooms.png" class="topnav_icons"><br>Heirlooms</button>
+        <button id="topnav_equipments"><img src="./icons/equipments.png" class="topnav_icons"><br>Equipments</button>
     </nav>
 
 
@@ -20,8 +21,9 @@
             <button type="button" class="nav_buttons" id="nav_potions"><img src="./icons/potions.jpg" class="nav_icons"></button>
             <button type="button" class="nav_buttons" id="nav_rumors"><img src="./icons/rumors.png" class="nav_icons"></button>
             <button type="button" class="nav_buttons" id="nav_poisons"><img src="./icons/poisons.png" class="nav_icons"></button>
-            <button type="button" class="nav_buttons" id="nav_junks">Useless junk</button>
-            <button type="button" class="nav_buttons" id="nav_heirlooms">Heirloom</button>
+            <button type="button" class="nav_buttons" id="nav_junks"><img src="./icons/junks.png" class="nav_icons"></button>
+            <button type="button" class="nav_buttons" id="nav_heirlooms"><img src="./icons/heirlooms.png" class="nav_icons"></button>
+            <button type="button" class="nav_buttons" id="nav_equipments"><img src="./icons/equipments.png" class="nav_icons"></button>
         </div>
     </main>
     <div id="potions_history_modal" class="histories"><div id="potions_history" class="histories_content"><span id="potions_history_close" class="close">&times;</span></div></div>
@@ -29,6 +31,10 @@
     <div id="poisons_history_modal" class="histories"><div id="poisons_history" class="histories_content"><span id="poisons_history_close" class="close">&times;</span></div></div>
     <div id="junks_history_modal" class="histories"><div id="junks_history" class="histories_content"><span id="junks_history_close" class="close">&times;</span></div></div>
     <div id="heirlooms_history_modal" class="histories"><div id="heirlooms_history" class="histories_content"><span id="heirlooms_history_close" class="close">&times;</span></div></div>
+    <div id="melees_history_modal" class="histories"><div id="melees_history" class="histories_content"><span id="melees_history_close" class="close">&times;</span></div></div>
+    <div id="rangeds_history_modal" class="histories"><div id="rangeds_history" class="histories_content"><span id="rangeds_history_close" class="close">&times;</span></div></div>
+    <div id="shields_history_modal" class="histories"><div id="shields_history" class="histories_content"><span id="shields_history_close" class="close">&times;</span></div></div>
+    <div id="armors_history_modal" class="histories"><div id="armors_history" class="histories_content"><span id="armors_history_close" class="close">&times;</span></div></div>
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/variables.js"></script>
     <script src="./js/main.js"></script>
@@ -37,5 +43,6 @@
     <script src="./js/poisons.js"></script>
     <script src="./js/junks.js"></script>
     <script src="./js/heirlooms.js"></script>
+    <script src="./js/equipments.js"></script>
 </body>
 </html>

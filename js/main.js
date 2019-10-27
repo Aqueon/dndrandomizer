@@ -14,6 +14,9 @@ $(document).ready(function () {
     $("#nav_heirlooms").on('click', loadHeirloomModule);
     $("#topnav_heirlooms").on('click', loadHeirloomModule);
 
+    $("#nav_equipments").on('click', loadEquipmentModule);
+    $("#topnav_equipments").on('click', loadEquipmentModule);
+
     function loadPotionModule () {
         $.get('./potions/' + language + '/potion_type.txt', data => potion_type = data.split('\n'));    
         $.get('./potions/' + language + '/potion_mainEffect.txt', data =>potion_mainEffect = data.split('\n'));
@@ -101,6 +104,40 @@ $(document).ready(function () {
         $('.topnav button').removeClass("active");
         $('#topnav_heirlooms').addClass("active");
         $.get('./heirlooms.html', {}, data => {
+            $("#root").html(data);
+        });
+    }
+
+    function loadEquipmentModule () {
+        let language = "cs";
+        $.get('./equipments/weapons/melees/' + language + '/weapon_blades.txt', data => melee_blades = data.split('\n'));
+        $.get('./equipments/weapons/melees/' + language + '/weapon_hilts.txt', data => melee_hilts = data.split('\n'));
+        $.get('./equipments/weapons/melees/' + language + '/weapon_qualities.txt', data => melee_qualities = data.split('\n'));
+        $.get('./equipments/weapons/melees/' + language + '/weapon_specials.txt', data => melee_specials = data.split('\n'));
+        $.get('./equipments/weapons/melees/' + language + '/weapon_styles.txt', data => melee_styles = data.split('\n'));
+        $.get('./equipments/weapons/melees/' + language + '/weapon_types.txt', data => melee_types = data.split('\n'));
+
+        $.get('./equipments/weapons/rangeds/' + language + '/weapon_handles.txt', data => ranged_handles = data.split('\n'));
+        $.get('./equipments/weapons/rangeds/' + language + '/weapon_materials.txt', data => ranged_materials = data.split('\n'));
+        $.get('./equipments/weapons/rangeds/' + language + '/weapon_qualities.txt', data => ranged_qualities = data.split('\n'));
+        $.get('./equipments/weapons/rangeds/' + language + '/weapon_specials.txt', data => ranged_specials = data.split('\n'));
+        $.get('./equipments/weapons/rangeds/' + language + '/weapon_styles.txt', data => ranged_styles = data.split('\n'));
+        $.get('./equipments/weapons/rangeds/' + language + '/weapon_types.txt', data => ranged_types = data.split('\n'));
+
+        $.get('./equipments/shields/' + language + '/shield_coatsofarms.txt', data => shield_coatsofarms = data.split('\n'));
+        $.get('./equipments/shields/' + language + '/shield_colors.txt', data => shield_colors = data.split('\n'));
+        $.get('./equipments/shields/' + language + '/shield_materials.txt', data => shield_materials = data.split('\n'));
+        $.get('./equipments/shields/' + language + '/shield_patterns.txt', data => shield_patterns = data.split('\n'));
+        $.get('./equipments/shields/' + language + '/shield_protections.txt', data => shield_protections = data.split('\n'));
+        $.get('./equipments/shields/' + language + '/shield_shapes.txt', data => shield_shapes = data.split('\n'));
+        $.get('./equipments/shields/' + language + '/shield_specials.txt', data => shield_specials = data.split('\n'));
+
+        if ($('#topnav_equipments').hasClass("active")) {
+            return;
+        }
+        $('.topnav button').removeClass("active");
+        $('#topnav_equipments').addClass("active");
+        $.get('./equipments.html', {}, data => {
             $("#root").html(data);
         });
     }

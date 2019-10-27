@@ -1,0 +1,6 @@
+Čtverec
+Kruh
+Elipsa
+Erb
+Obdélník
+Trojúhelník

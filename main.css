@@ -65,7 +65,7 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    width: 100px;
+    width: 150px;
     background-color: transparent;
     border: none;
 }
@@ -82,4 +82,20 @@
 
 #root {
     padding: 25px;
+}
+
+* {
+    box-sizing: border-box;
+}
+  
+.box {
+    float: left;
+    width: 25%;
+    padding: 15px;
+}
+  
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }

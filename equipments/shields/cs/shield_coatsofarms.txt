@@ -1,0 +1,7 @@
+Nic;
+Náboženský znak;Ilmater;Tyr;Baal;Bane;Chauntea;Lathander;Tempus;Moradin;Gruumsh
+Velká bestie;Kraken;Drak;Lev;Vlk;Kanec;Jelen
+Zvíře;Had;Jezevec;Netopýr;Králík;Liška;Žába;Pavouk
+Pták;Orel;Sova;Sup;Labuť;Kohout;Vrabec
+Válka;Meč;Skřížené meče, Skřížená kopí;Plameny;Lebka;Vrána
+Rostlina;Dub;Jedle;Růže;Čtyřlístek;Slunečnice;Vřes

@@ -1,6 +1,6 @@
 $(document).ready(function (){
 
-    $(document).on('click', '#heirloom_generator', GenerateJunk);
+    $(document).on('click', '#heirloom_generator', GenerateHeirloom);
     $(document).on('click', '#heirlooms_history_show', () => {
         $('#heirlooms_history_modal').css('display', 'block');
     });
@@ -14,7 +14,7 @@ $(document).ready(function (){
         $('#heirlooms_history_modal').css('display', 'none');
     });
 
-    function GenerateJunk () {
+    function GenerateHeirloom () {
         const quantity = $('#heirloom_quantity').val();
         let mainBody = $('#heirlooms_results');
         let history = $('#heirlooms_history');

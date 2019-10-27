@@ -1,0 +1,7 @@
+Nic
+Horizontální pruhy
+Vertikální pruhy
+Šachovnice
+Dvě vertikálně rozdělná pole
+Dvě horizontálně rozdělená pole
+Kvadranty
