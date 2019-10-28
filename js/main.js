@@ -124,8 +124,8 @@ $(document).ready(function () {
         $.get('./equipments/weapons/rangeds/' + language + '/weapon_styles.txt', data => ranged_styles = data.split('\n'));
         $.get('./equipments/weapons/rangeds/' + language + '/weapon_types.txt', data => ranged_types = data.split('\n'));
 
-        $.get('./equipments/shields/' + language + '/shield_coatsofarms.txt', data => shield_coatsofarms = data.split('\n'));
         $.get('./equipments/shields/' + language + '/shield_colors.txt', data => shield_colors = data.split('\n'));
+        $.get('./equipments/shields/' + language + '/shield_crests.txt', data => shield_crests = data.split('\n'));
         $.get('./equipments/shields/' + language + '/shield_materials.txt', data => shield_materials = data.split('\n'));
         $.get('./equipments/shields/' + language + '/shield_patterns.txt', data => shield_patterns = data.split('\n'));
         $.get('./equipments/shields/' + language + '/shield_protections.txt', data => shield_protections = data.split('\n'));

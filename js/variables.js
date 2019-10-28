@@ -44,8 +44,8 @@ let ranged_specials = new Array();
 let ranged_styles = new Array();
 let ranged_types = new Array();
 
-let shield_coatsofarms = new Array();
 let shield_colors = new Array();
+let shield_crests = new Array();
 let shield_materials = new Array();
 let shield_patterns = new Array();
 let shield_protections = new Array();

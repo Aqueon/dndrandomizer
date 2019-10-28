@@ -120,24 +120,24 @@ $(document).ready(function (){
             let material = "<b>Materiál:</b> " + shield_materials[Math.floor(Math.random() * shield_materials.length)] + "<br>";
             let special = "<b>Speciální úprava:</b> " + shield_specials[Math.floor(Math.random() * shield_specials.length)] + "<br>";
             let pattern = "<b>Vzor:</b> " + shield_patterns[Math.floor(Math.random() * shield_patterns.length)] + "<br>";
-            let category = shield_coatsofarms[Math.floor(Math.random() * shield_coatsofarms.length)].split(';');
-            let coatofarms = "";
+            let category = shield_crests[Math.floor(Math.random() * shield_crests.length)].split(';');
+            let crest = "";
             switch (category[0]) {
                 case "Nic":
-                    coatofarms = "<b>Erb:</b> " + category[0] + "<br>";
+                    crest = "<b>Erb:</b> " + category[0] + "<br>";
                     break;
                 case "Náboženský znak":
-                    coatofarms = "<b>Erb:</b> " + category[0] + " - " + category[Math.floor(Math.random() * (category.length - 1) + 1)] + "<br>";
+                    crest = "<b>Erb:</b> " + category[0] + " - " + category[Math.floor(Math.random() * (category.length - 1) + 1)] + "<br>";
                     break;
                 default:
-                    coatofarms = "<b>Erb:</b> " + category[0] + " - " + category[Math.floor(Math.random() * (category.length - 1) + 1)].toLowerCase() + "<br>";
+                    crest = "<b>Erb:</b> " + category[0] + " - " + category[Math.floor(Math.random() * (category.length - 1) + 1)].toLowerCase() + "<br>";
                     break;
             }
             let color = "<b>Barva:</b> " + shield_colors[Math.floor(Math.random() * shield_colors.length)] + "<br>";
             let protection = "<b>Extra ochrana:</b> " + shield_protections[Math.floor(Math.random() * shield_protections.length)] + "</p>";
             
 
-            resultElement = element + shape + material + special + pattern + coatofarms + color + protection;
+            resultElement = element + shape + material + special + pattern + crest + color + protection;
             mainBody.append(resultElement);
             history.append(resultElement);
         }
